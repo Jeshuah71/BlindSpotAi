@@ -1,0 +1,426 @@
+
+.app {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+header {
+  margin-bottom: 35px;
+}
+
+.eyebrow {
+  color: #0c8967;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 10px 0;
+  color: #17211b;
+}
+
+h1 span {
+  color: #0c8967;
+}
+
+header p,
+.panel p {
+  color: #64748b;
+}
+
+.panel {
+  background: #f8faf9;
+  padding: 28px;
+  border: 1px solid #e2e8e7;
+  border-radius: 16px;
+}
+
+.panel h2,
+.preview h3 {
+  color: #17211b;
+}
+
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 40px;
+  margin-top: 25px;
+  border: 2px dashed #0c8967;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #f0faf6;
+  transition: background 0.2s ease;
+}
+
+.upload-box:hover {
+  background: #e5f6ee;
+}
+
+.upload-box span {
+  font-weight: bold;
+  color: #0c8967;
+}
+
+.upload-box small {
+  color: #64748b;
+}
+
+.upload-box input {
+  margin-top: 10px;
+  max-width: 100%;
+  color: #17211b;
+}
+
+.upload-box input::file-selector-button {
+  background: #0c8967;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.preview {
+  margin-top: 30px;
+}
+
+.preview img {
+  display: block;
+  max-width: 100%;
+  max-height: 350px;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.error {
+  color: #dc2626 !important;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  .panel {
+    padding: 16px;
+  }
+
+  .upload-box {
+    padding: 25px 12px;
+  }
+}
+
+
+.classify-button {
+  padding: 12px 24px;
+  background: #0c8967;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.predictions {
+  margin-top: 25px;
+  padding: 24px;
+  background: white;
+  border: 1px solid #e2e8e7;
+  border-radius: 12px;
+}
+
+.prediction {
+  margin-bottom: 20px;
+}
+
+.prediction-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+  color: #17211b;
+}
+
+.progress-track {
+  height: 10px;
+  background: #e2e8e7;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #0c8967;
+  border-radius: 10px;
+}
+
+.comparison-result {
+  margin-top: 24px;
+  padding: 20px;
+  background: #e9f8f1;
+  border: 1px solid #a8dcc4;
+  border-radius: 12px;
+}
+
+.comparison-result h3 {
+  color: #0c8967;
+}
+
+.comparison-result p {
+  color: #17211b;
+}
+
+
+/* Wider, more compact page */
+.app {
+  max-width: 1180px;
+  margin: 30px auto;
+  width: 100%;
+}
+
+.panel {
+  padding: 24px;
+}
+
+/* Smaller upload area */
+.upload-box {
+  padding: 18px;
+  margin-top: 12px;
+}
+
+.preview {
+  margin-top: 20px;
+}
+
+/* Two image columns */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.image-card {
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid #e2e8e7;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.image-card h3 {
+  margin: 0 0 14px;
+  color: #17211b;
+}
+
+/* Equal-size image containers */
+.image-frame {
+  height: 245px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #f8faf9;
+  border-radius: 10px;
+}
+
+.image-frame img,
+.image-frame canvas {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Compact prediction results */
+.image-card .predictions {
+  margin-top: 16px;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.image-card .predictions h4 {
+  margin: 0 0 12px;
+}
+
+.prediction {
+  margin-bottom: 12px;
+}
+
+.prediction-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.progress-track {
+  height: 7px;
+}
+
+/* Transformation controls */
+.transform-controls {
+  margin-top: 20px;
+  padding: 18px;
+}
+
+.transform-controls h3 {
+  margin: 0 0 15px;
+}
+
+.controls-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.control-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.control-item input {
+  width: 100%;
+  accent-color: #0c8967;
+}
+
+/* Main action */
+.compare-button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  font-size: 15px;
+}
+
+/* Results */
+.comparison-result {
+  margin-top: 20px;
+  padding: 18px;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+  .image-grid,
+  .controls-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-frame {
+    height: 220px;
+  }
+
+  .app {
+    margin: 15px auto;
+  }
+}
+
+
+.robustness-button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px;
+  background: white;
+  color: #0c8967;
+  border: 1px solid #0c8967;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.robustness-button:hover:not(:disabled) {
+  background: #f0faf6;
+}
+
+.robustness-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.robustness-panel {
+  margin-top: 22px;
+  padding: 24px;
+  background: white;
+  border: 1px solid #e2e8e7;
+  border-radius: 12px;
+}
+
+.robustness-panel h3 {
+  margin-top: 0;
+}
+
+.robustness-panel p {
+  color: #64748b;
+}
+
+.robustness-row {
+  display: grid;
+  grid-template-columns: 45px 1fr 60px;
+  align-items: center;
+  gap: 14px;
+  margin: 16px 0;
+  font-size: 13px;
+}
+
+.robustness-track {
+  height: 12px;
+  background: #e2e8e7;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.robustness-fill {
+  height: 100%;
+  background: #0c8967;
+  border-radius: 8px;
+}
+
+.robustness-note {
+  margin-top: 20px;
+  font-size: 12px;
+}
+.prediction-changed {
+  grid-column: 2 / 4;
+  color: #b45309;
+  font-size: 12px;
+  margin-top: -5px;
+}
+
+.robustness-summary {
+  margin-top: 25px;
+  padding: 18px;
+  background: #f8faf9;
+  border: 1px solid #dce8e2;
+  border-radius: 12px;
+}
+
+.robustness-summary h4 {
+  margin-top: 0;
+  color: #0c8967;
+}
+
+.robustness-summary p {
+  color: #17211b;
+  line-height: 1.6;
+}
+
+.prediction-placeholder {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.experiment-helper {
+  margin-top: 12px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
